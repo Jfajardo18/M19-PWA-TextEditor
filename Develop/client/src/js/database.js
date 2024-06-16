@@ -17,7 +17,7 @@ export const putDb = async (content) => {
   const contactdb = await openDB('jate', 1,);
   const tx = contactdb.transaction('jate', 'readwrite');
   const store = tx.objectStore('jate');
-  const request = store.put({ id: 1, content: content });
+  const request = store.put({ content: content });
   const result = await request;
   console.log('result', result);
 
